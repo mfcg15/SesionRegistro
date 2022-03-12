@@ -1,0 +1,14 @@
+{% extends "index.html" %}
+{% block titulo%}
+    <title>Dashboard</title>
+{% endblock %}
+{% block contenedor%}
+    <body class="bodyDashoard">
+        <div class="informacion">
+            {% for x in usuario %}
+                <h1 class="informacionUsuario">Welcome {{x.first_name}} {{x.last_name}} !!!</h1>
+            {% endfor %}
+        </div>
+        <a href="/logout" style="text-decoration: none; color: white;">Logout</a>
+    </body>
+{% endblock %}
